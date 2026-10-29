@@ -1,0 +1,71 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Sobre a Valen{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <!-- Introdução -->
+    <div style="margin-top: 20px; margin-bottom: 40px;">
+        <span class="sub-tag" style="color: var(--text-muted); margin-bottom: 4px;">— SOBRE NÓS</span>
+        <h1 class="section-title" style="font-size: 2.5rem; margin-bottom: 30px;">Sobre a Valen</h1>
+        
+        <div class="about-grid">
+            <div>
+                <p style="margin-bottom: 16px; color: var(--text-muted); font-size: 0.95rem;">
+                    A Valen é uma agência de aluguel de casas de praia. Selecionamos imóveis no litoral do Rio Grande do Norte para que famílias e grupos de amigos possam viver dias de descanso, sol e mar com toda a comodidade.
+                </p>
+                <p style="margin-bottom: 16px; color: var(--text-muted); font-size: 0.95rem;">
+                    Mais do que alugar um endereço, a gente quer que a sua temporada funcione: a casa organizada, as informações claras e alguém por perto para responder rápido. Por isso trabalhamos com poucas casas e conhecemos uma por uma.
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Este site reúne as faixas da nossa apresentação: a página inicial, o catálogo de casas e esta página sobre a agência.
+                </p>
+            </div>
+            <div class="split-img-wrapper" style="height: 380px;">
+                <img src="{% static 'core/images/download (5).jpg' %}" alt="Varanda da Valen ao pôr do sol" class="split-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- Nossos Objetivos -->
+    <section class="goals-card">
+        <span class="sub-tag">— O QUE NOS MOVE</span>
+        <h2 class="cta-title" style="margin-bottom: 24px;">Nossos objetivos</h2>
+
+        <div class="goal-item">
+            <span class="goal-num">01</span>
+            <div>
+                <h3 class="goal-title">Hospedagem ideal</h3>
+                <p class="goal-desc">Ajudar cada pessoa a encontrar a casa de praia certa para a sua viagem, o seu grupo e o seu jeito de descansar.</p>
+            </div>
+        </div>
+
+        <div class="goal-item">
+            <span class="goal-num">02</span>
+            <div>
+                <h3 class="goal-title">Conforto</h3>
+                <p class="goal-desc">Oferecer casas bem cuidadas, limpas e completas, prontas para receber você no dia em que chegar.</p>
+            </div>
+        </div>
+
+        <div class="goal-item">
+            <span class="goal-num">03</span>
+            <div>
+                <h3 class="goal-title">Tranquilidade</h3>
+                <p class="goal-desc">Proporcionar férias leves, com um atendimento próximo e atencioso do começo ao fim da temporada.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Banner / Chamada -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px;">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Curioso para ver onde você pode ficar? As casas estão no nosso catálogo.
+        </p>
+        <a href="{% url 'casas' %}" class="btn btn-dark">Ver casas disponíveis</a>
+    </div>
+
+</div>
+{% endblock %}

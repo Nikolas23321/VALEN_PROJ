@@ -15,6 +15,11 @@
             <a href="{% url 'home' %}" class="logo">
                 <span>✦</span> Valen.
             </a>
+             <nav class="main-nav">
+                <a href="{% url 'home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Início</a>
+                <a href="{% url 'casas' %}" class="nav-link {% if request.resolver_match.url_name == 'casas' %}active{% endif %}">Casas de praia</a>
+                <a href="{% url 'sobre' %}" class="nav-link {% if request.resolver_match.url_name == 'sobre' %}active{% endif %}">Sobre</a>
+            </nav>
         </div>
     </header>
 
@@ -33,7 +38,14 @@
                         Agência de aluguel de casas de praia. Selecionamos imóveis no litoral do Rio Grande do Norte para que sua única preocupação seja aproveitar o mar.
                     </p>
                 </div>
-                
+                <div>
+                    <h4 class="footer-heading">— NAVEGAÇÃO</h4>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'home' %}">Início</a></li>
+                        <li><a href="{% url 'casas' %}">Casas de praia</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                    </ul>
+                </div>
                 <div>
                     <h4 class="footer-heading">— ONDE ESTAMOS</h4>
                     <ul class="footer-links">
