@@ -1,0 +1,120 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Casas de Praia - Valen{% endblock %}
+
+{% block content %}
+<div class="container">
+
+
+    <div style="margin-bottom: 40px; margin-top: 20px;">
+        <span class="sub-tag" style="color: var(--text-muted); margin-bottom: 4px;">— PORTFÓLIO DE CASAS</span>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
+            <h1 class="section-title" style="font-size: 2.5rem;">Nossas casas<br>de praia</h1>
+            <p style="color: var(--text-muted); max-width: 420px; font-size: 0.9rem;">
+                Quatro casas no litoral do Rio Grande do Norte, de grupos pequenos a turmas de até dez pessoas. Escolha pelo tamanho do grupo e pelo clima que você procura.
+            </p>
+        </div>
+    </div>
+
+    <div class="houses-grid" style="grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 60px;">
+        <div class="house-card">
+            <div class="house-img-wrapper" style="height: 320px;">
+                <span class="house-badge">01</span>
+                <img src="{% static 'core/images/download.jpg' %}" alt="Casa Brisa do Mar" class="house-img">
+            </div>
+            <h3 class="house-title">Casa Brisa do Mar</h3>
+            <p class="house-details">Litoral do Rio Grande do Norte · 6 hóspedes</p>
+        </div>
+
+        <div class="house-card">
+            <div class="house-img-wrapper" style="height: 320px;">
+                <span class="house-badge">02</span>
+                <img src="{% static 'core/images/download (1).jpg' %}" alt="Casa Sol e Areia" class="house-img">
+            </div>
+            <h3 class="house-title">Casa Sol e Areia</h3>
+            <p class="house-details">Litoral do Rio Grande do Norte · 8 hóspedes</p>
+        </div>
+
+        <div class="house-card">
+            <div class="house-img-wrapper" style="height: 320px;">
+                <span class="house-badge">03</span>
+                <img src="{% static 'core/images/download (3).jpg' %}" alt="Casa Duna" class="house-img">
+            </div>
+            <h3 class="house-title">Casa Duna</h3>
+            <p class="house-details">Litoral do Rio Grande do Norte · 6 hóspedes</p>
+        </div>
+
+        <div class="house-card">
+            <div class="house-img-wrapper" style="height: 320px;">
+                <span class="house-badge">04</span>
+                <img src="{% static 'core/images/download (4).jpg' %}" alt="Casa Maré" class="house-img">
+            </div>
+            <h3 class="house-title">Casa Maré</h3>
+            <p class="house-details">Litoral do Rio Grande do Norte · 10 hóspedes</p>
+        </div>
+    </div>
+
+
+    <section style="margin-bottom: 60px;">
+        <span class="sub-tag" style="color: var(--text-muted); margin-bottom: 4px;">— DETALHES</span>
+        <h2 class="section-title" style="margin-bottom: 24px;">Como é cada casa</h2>
+
+        <div class="house-list-item">
+            <div class="house-list-info">
+                <span class="house-list-number">01</span>
+                <h3 class="house-list-title">Casa Brisa do Mar</h3>
+                <p class="house-list-specs">6 hóspedes · 3 quartos · Litoral do Rio Grande do Norte</p>
+            </div>
+            <div class="house-list-desc">
+                Casa de varanda com rede, paredes brancas e azul, e o mar aparecendo entre as palmeiras. Conforto de casa de vó com a brisa entrando pelas janelas.
+            </div>
+        </div>
+
+        <div class="house-list-item">
+            <div class="house-list-info">
+                <span class="house-list-number">02</span>
+                <h3 class="house-list-title">Casa Sol e Areia</h3>
+                <p class="house-list-specs">8 hóspedes · 4 quartos · Litoral do Rio Grande do Norte</p>
+            </div>
+            <div class="house-list-desc">
+                Casa moderna com piscina de borda infinita, deck de madeira e espreguiçadeiras, a poucos passos da areia. Ideal para grupos de amigos.
+            </div>
+        </div>
+
+        <div class="house-list-item">
+            <div class="house-list-info">
+                <span class="house-list-number">03</span>
+                <h3 class="house-list-title">Casa Duna</h3>
+                <p class="house-list-specs">6 hóspedes · 3 quartos · Litoral do Rio Grande do Norte</p>
+            </div>
+            <div class="house-list-desc">
+                Casa térrea de paredes de barro e sol, com pergolado de madeira coberto de trepadeiras, rede na varanda e um caminho curto de areia que sai entre as dunas. Boa para quem busca sossego e pé no chão.
+            </div>
+        </div>
+
+        <div class="house-list-item">
+            <div class="house-list-info">
+                <span class="house-list-number">04</span>
+                <h3 class="house-list-title">Casa Maré</h3>
+                <p class="house-list-specs">10 hóspedes · 5 quartos · Litoral do Rio Grande do Norte</p>
+            </div>
+            <div class="house-list-desc">
+                Casa de dois andares com fachada de madeira verde e detalhes brancos, varanda ampla com cadeiras de balanço, jardim de coqueiros e um caminho de pedras até a porta. Boa para grupos grandes que querem passar a temporada juntos.
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="cta-card" style="background-color: #f1ebd8; color: var(--text-main); display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <h2 class="cta-title" style="color: var(--text-main); margin-bottom: 8px;">Não sabe qual escolher?</h2>
+            <p class="cta-desc" style="color: var(--text-muted); margin-bottom: 0;">Conta um pouco sobre a sua viagem e veja o que guia a escolha na nossa página sobre a agência.</p>
+        </div>
+        <div class="btn-group">
+            <a href="{% url 'home' %}" class="btn btn-outline" style="color: var(--text-main); border-color: rgba(0,0,0,0.2);">Voltar ao início</a>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

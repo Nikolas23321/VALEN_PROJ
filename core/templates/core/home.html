@@ -1,0 +1,115 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Início - Valen{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <section class="hero">
+        <img src="{% static 'core/images/download (6).jpg' %}" alt="Praia da Ponta Negra" class="hero-img">
+        <div class="hero-overlay">
+            <span class="sub-tag">AGÊNCIA DE CASAS DE PRAIA</span>
+            <h1 class="hero-title">Seu refúgio à beira-mar</h1>
+            <p class="hero-desc">
+                A Valen reúne casas de praia no litoral do Rio Grande do Norte para você descansar, reunir a família e sentir a brisa do mar sem pressa.
+            </p>
+            <div class="btn-group">
+                <a href="{% url 'casas' %}" class="btn btn-primary">Conheça nossas casas</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">04</div>
+                <div class="stat-label">casas selecionadas no litoral</div>
+            </div>
+            <div>
+                <div class="stat-number">10</div>
+                <div class="stat-label">hóspedes na maior casa</div>
+            </div>
+            <div>
+                <div class="stat-number">RN</div>
+                <div class="stat-label">litoral do Rio Grande do Norte</div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section>
+        <div class="section-header">
+            <div>
+                <span class="sub-tag" style="color: var(--text-muted); margin-bottom: 4px;">— TEMPORADA</span>
+                <h2 class="section-title">Casas em destaque</h2>
+            </div>
+            <a href="{% url 'casas' %}" class="view-all-link">Ver todas as casas &rarr;</a>
+        </div>
+
+        <div class="houses-grid">
+            <div class="house-card">
+                <div class="house-img-wrapper">
+                    <span class="house-badge">01</span>
+                    <img src="{% static 'core/images/download.jpg' %}" alt="Casa Brisa do Mar" class="house-img">
+                </div>
+                <h3 class="house-title">Casa Brisa do Mar</h3>
+                <p class="house-details">6 hóspedes · 3 quartos</p>
+            </div>
+
+            <div class="house-card">
+                <div class="house-img-wrapper">
+                    <span class="house-badge">02</span>
+                    <img src="{% static 'core/images/download (1).jpg' %}" alt="Casa Sol e Areia" class="house-img">
+                </div>
+                <h3 class="house-title">Casa Sol e Areia</h3>
+                <p class="house-details">8 hóspedes · 4 quartos</p>
+            </div>
+
+            <div class="house-card">
+                <div class="house-img-wrapper">
+                    <span class="house-badge">03</span>
+                    <img src="{% static 'core/images/download (3).jpg' %}" alt="Casa Duna" class="house-img">
+                </div>
+                <h3 class="house-title">Casa Duna</h3>
+                <p class="house-details">6 hóspedes · 3 quartos</p>
+            </div>
+
+            <div class="house-card">
+                <div class="house-img-wrapper">
+                    <span class="house-badge">04</span>
+                    <img src="{% static 'core/images/download (4).jpg' %}" alt="Casa Maré" class="house-img">
+                </div>
+                <h3 class="house-title">Casa Maré</h3>
+                <p class="house-details">10 hóspedes · 5 quartos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="split-feature">
+        <div class="split-img-wrapper">
+            <img src="{% static 'core/images/download (5).jpg' %}" alt="Sala de estar praiana" class="split-img">
+        </div>
+        <div class="split-content">
+            <span class="sub-tag">— A VALEN</span>
+            <h2 class="split-title">Férias com cheiro de mar</h2>
+            <p class="split-text">
+                Somos uma agência de aluguel de casas de praia. Cada casa apresentada aqui foi escolhida pelo conforto, pela localização e pelo jeito simples de receber bem.
+            </p>
+            <p class="split-text">
+                Nosso cuidado é com o detalhe: a casa limpa e pronta para morar, a varanda com rede, o caminho curto até a areia. Você chega e o resto acontece.
+            </p>
+        </div>
+    </section>
+
+  
+    <section class="cta-card">
+        <span class="sub-tag">— PRÓXIMA TEMPORADA</span>
+        <h2 class="cta-title">Pronto para escolher a sua casa?</h2>
+        <p class="cta-desc">Veja as quatro casas que preparamos para o seu próximo descanso à beira-mar.</p>
+        <a href="{% url 'casas' %}" class="btn btn-primary">Ver casas disponíveis</a>
+    </section>
+
+</div>
+{% endblock %}
