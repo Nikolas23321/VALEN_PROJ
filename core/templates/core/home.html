@@ -25,11 +25,11 @@
     <section class="stats-section">
         <div class="stats-grid">
             <div>
-                <div class="stat-number">04</div>
+                <div class="stat-number">{{ quantidade_casas|stringformat:"02d" }}</div>
                 <div class="stat-label">casas selecionadas no litoral</div>
             </div>
             <div>
-                <div class="stat-number">10</div>
+                <div class="stat-number">{{ maior_capacidade }}</div>
                 <div class="stat-label">hóspedes na maior casa</div>
             </div>
             <div>
@@ -50,43 +50,26 @@
         </div>
 
         <div class="houses-grid">
+
+            {% for casa in casas_destaque %}
             <div class="house-card">
                 <div class="house-img-wrapper">
-                    <span class="house-badge">01</span>
-                    <img src="{% static 'core/images/download.jpg' %}" alt="Casa Brisa do Mar" class="house-img">
+                    <span class="house-badge">{{ casa.numero }}</span>
+                    <img src="{{ casa.imagem }}" alt="{{ casa.titulo }}" class="house-img">
                 </div>
-                <h3 class="house-title">Casa Brisa do Mar</h3>
-                <p class="house-details">6 hóspedes · 3 quartos</p>
+
+                <h3 class="house-title">{{ casa.titulo }}</h3>
+                <p class="house-details">
+                    {{ casa.hospedes }} hóspedes · {{ casa.quartos }} quartos
+                </p>
+                <p class="house-details">{{ casa.descricao }}</p>
             </div>
 
-            <div class="house-card">
-                <div class="house-img-wrapper">
-                    <span class="house-badge">02</span>
-                    <img src="{% static 'core/images/download (1).jpg' %}" alt="Casa Sol e Areia" class="house-img">
-                </div>
-                <h3 class="house-title">Casa Sol e Areia</h3>
-                <p class="house-details">8 hóspedes · 4 quartos</p>
-            </div>
+            {% empty %}
+            <p>Nenhuma casa em destaque no momento.</p>
+            {% endfor %}
 
-            <div class="house-card">
-                <div class="house-img-wrapper">
-                    <span class="house-badge">03</span>
-                    <img src="{% static 'core/images/download (3).jpg' %}" alt="Casa Duna" class="house-img">
-                </div>
-                <h3 class="house-title">Casa Duna</h3>
-                <p class="house-details">6 hóspedes · 3 quartos</p>
-            </div>
-
-            <div class="house-card">
-                <div class="house-img-wrapper">
-                    <span class="house-badge">04</span>
-                    <img src="{% static 'core/images/download (4).jpg' %}" alt="Casa Maré" class="house-img">
-                </div>
-                <h3 class="house-title">Casa Maré</h3>
-                <p class="house-details">10 hóspedes · 5 quartos</p>
-            </div>
         </div>
-    </section>
 
     <section class="split-feature">
         <div class="split-img-wrapper">
